@@ -22,12 +22,28 @@ function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
-      <ol>
-        {users.length < 1 ? (<li>Nothing to display</li>) : users.map((u, x) => (
-          <li key={x}>{u.name.first} {u.name.last}</li>
+      <h1>User Listing</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th className="imageCol"></th>
+            <th className="nameCol">Name</th>
+            <th className="ageCol">Age</th>
+            <th className="cityCol">City</th>
+          </tr>
+        </thead>
+        {users.length < 1 ? (<tr><td colSpan={4}>Nothing to display</td></tr>) : users.map((u, x) => (
+          <>
+            <tr key={x}>
+              <td className="imageCol"><img src={u.picture.thumbnail} alt="" /></td>
+              <td className="nameCol"><a href={`/detail/${x+1}`}>{u.name.first} {u.name.last}</a></td>
+              <td className="ageCol">{u.dob.age}</td>
+              <td className="cityCol">{u.location.city}</td>
+            </tr>
+          </>
         ))}
-      </ol>
+      </table>
     </>
   )
 }

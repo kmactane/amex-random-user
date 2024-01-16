@@ -1,27 +1,19 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-ol {
+  padding: 0.5rem 2rem 5rem;
   text-align: left;
 }
-ol li {
-  padding-left: 0.5em;
+
+
+table {
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+td {
+  vertical-align: top;
+}
+.nameCol {
+  padding-left: 10px;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
