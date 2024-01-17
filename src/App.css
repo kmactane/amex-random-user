@@ -17,3 +17,6 @@ td {
   padding-left: 10px;
 }
 
+img.bigPic {
+  float: right;
+}
